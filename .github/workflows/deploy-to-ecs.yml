@@ -36,7 +36,7 @@ jobs:
       - name: Force new deployment on ECS (eu-central-1)
         run: |
           aws ecs update-service \
-            --cluster flask-cluster \
+            --cluster bingohans-ecs-fargate \
             --service flask-service \
             --force-new-deployment \
             --region eu-central-1

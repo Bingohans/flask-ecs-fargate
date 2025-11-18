@@ -10,7 +10,6 @@ def home():
     return f"""
     <h1>Hello from LilleNiels' Flask on AWS ECS Fargate!</h1>
     <p>Hostname: <b>{socket.gethostname()}</b></p>
-    <p>Public IP: <b>{os.popen('curl -s ifconfig.me').read().strip() or 'unknown'}</b></p>
     <p>Deployed with GitHub Actions → ECR → ECS Fargate → ALB</p>
     <p>LIVE NOV 18 2025 – IT FINALLY WORKS!</p>
     """

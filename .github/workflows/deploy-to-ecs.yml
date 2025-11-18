@@ -39,4 +39,4 @@ jobs:
             --cluster bingohans-ecs-fargate \
             --service flask-service \
             --force-new-deployment \
-            --region eu-central-1
+            --region us-east-1

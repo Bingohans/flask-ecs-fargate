@@ -14,9 +14,9 @@ def home():
     <p>LIVE NOV 18 2025 – IT FINALLY WORKS!</p>
     """
 
-@app.route('/health')
-def health():
-    return "200"
+@app.route('/health', methods=['GET'])
+def health_check():
+    return jsonify({'status': 'healthy'}), 200
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8000)

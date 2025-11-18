@@ -5,4 +5,4 @@ COPY app.py .
 
 RUN pip install --no-cache-dir flask gunicorn
 
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:8000", "--workers", "2"]
+CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:8000", "--workers", "2", "--timeout", "120", "--keep-alive", "5"]

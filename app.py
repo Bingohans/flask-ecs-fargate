@@ -1,7 +1,6 @@
 from flask import Flask
 import socket
 import os
-from flask import jsonify
 
 app = Flask(__name__)
 
@@ -16,7 +15,8 @@ def home():
 
 @app.route('/health', methods=['GET'])
 def health_check():
-    return jsonify({'status': 'healthy'}), 200
+    # Returner ren streng i stedet for jsonify, stadig med status 200
+    return "healthy", 200
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8000)

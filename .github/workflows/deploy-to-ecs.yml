@@ -37,6 +37,6 @@ jobs:
         run: |
           aws ecs update-service \
             --cluster bingohans-ecs-fargate \
-            --service flask-service \
+            --service flask-task2 \
             --force-new-deployment \
             --region us-east-1
